@@ -1074,7 +1074,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 1.5rem 0;
+		margin: 0 0 .2rem 0;
 		padding-left: 1rem;
 	}
 
@@ -1124,6 +1124,20 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
+
+
+	/* Makes the span element have line breaks after a certain width */
+	.project-desc-text {
+		display: inline-block;
+		width: 19.5rem; /* Adjust this width */
+		word-wrap: break-word;
+	}
+
+	/* Left aligns the second ul that lists technologies used */
+	.project-technologies {
+		margin-left: 0; /* Removes default margin */
+		padding-left: 0; /* Removes default padding */
+	}
 		ul.actions li {
 			padding: 0 0 0 0.75rem;
 			vertical-align: middle;
@@ -1381,6 +1395,27 @@ input, select, textarea {
 		padding-left: 0;
 	}
 
+	ul.contact-icons.project-list > li {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	ul.contact-icons.project-list > li > .text-content {
+		margin-left: 10px; /* Adds some space between the icon and the text */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	ul.contact-icons.project-list > li > .text-content > a {
+		margin-bottom: .8rem; /* More spacing here */
+	}
+
+	ul.contact-icons.project-list > li > .text-content > p {
+		margin-top: 0;
+		margin-bottom: 0.3rem; /* Less spacing here */
+	}
+
 		ul.contact-icons > li {
 			margin: 1.25rem 0 0 0;
 			padding-left: 0;
@@ -1391,7 +1426,7 @@ input, select, textarea {
 				width: 2.25rem;
 				height: 2.25rem;
 				line-height: 2.25rem;
-				border-radius: 2.25rem;
+				border-radius: 50%;
 				background-color: white;
 				color: #2e2b37;
 				cursor: default;
@@ -1624,7 +1659,7 @@ input, select, textarea {
 		input[type="button"].small,
 		button.small,
 		.button.small {
-			font-size: 0.4rem;
+			font-size: 0.5rem;
 			height: 1.875rem;
 			line-height: 1.875rem;
 			padding: 0 1.25rem 0 1.4rem;
@@ -2223,7 +2258,7 @@ input, select, textarea {
 
 			.panel > *.color2 {
 				background-image: url("../../images/overlay.png"), linear-gradient(45deg, rgba(114, 97, 147, 0.25) 25%, rgba(227, 123, 124, 0.25) 50%, rgba(255, 228, 180, 0.25));
-				background-size: 128px 128px, auto;
+				background-size: 100px 100px, auto;
 				background-color: #e37b7c;
 			}
 
@@ -2291,6 +2326,18 @@ input, select, textarea {
 			flex-direction: column;
 		}
 
+		/* Custom styles for project-intro */
+		.project-intro {
+			display: flex;
+			flex-wrap: wrap; /* Allows flex items to wrap onto multiple lines */
+			align-items: flex-start;
+		}
+
+		/* New class for each project group */
+		.project-intro .project-group {
+			flex: 0 0 calc(50% - 2rem); /* Sets flex-basis to 50% minus padding */
+			margin: .5rem; /* Sets margin to create space between project groups */
+		}
 			.panel > .intro.joined {
 			}
 
@@ -2557,7 +2604,7 @@ input, select, textarea {
 		}
 
 		.panel.medium {
-			width: 50rem;
+			width: 40rem;
 		}
 
 		.panel.large {
