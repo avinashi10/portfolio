@@ -2335,11 +2335,10 @@ input, select, textarea {
 
 		/* New class for each project group */
 		.project-intro .project-group {
-			flex: 0 0 calc(50% - 2rem); /* Sets flex-basis to 50% minus padding */
-			margin: .5rem; /* Sets margin to create space between project groups */
+			flex: 0 0 calc(40% - 1.5rem); /* Sets flex-basis to 40% minus padding */
+			margin: 1rem; /* Sets margin to create space between project groups */
 		}
-			.panel > .intro.joined {
-			}
+
 
 				.panel > .intro.joined + .inner {
 					padding-left: 2.625rem;
@@ -2608,7 +2607,7 @@ input, select, textarea {
 		}
 
 		.panel.large {
-			width: 65rem;
+			width: 60rem;
 		}
 
 		.panel.small .span-0-25, .panel.medium .span-0-25, .panel.large .span-0-25 {
@@ -3097,6 +3096,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
+
 			.panel.small, .panel.medium, .panel.large {
 				width: 100% !important;
 			}
@@ -3534,7 +3534,9 @@ input, select, textarea {
 		}
 
 	}
-
+	.panel .project-panel {
+		padding: 2rem 3.5rem;
+	}
 /* Page Wrapper */
 
 	#page-wrapper {
